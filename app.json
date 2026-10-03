@@ -1,25 +1,56 @@
 {
   "expo": {
-    "name": "fitflow",
+    "name": "FitFlow",
     "slug": "fitflow",
-    "version": "1.0.0",
-    "orientation": "portrait",
+    "version": "2.0.0",
+    "orientation": "default",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "scheme": "fitflow",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#14213D"
+    },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.fitflow.app",
+      "buildNumber": "20",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
     },
     "android": {
+      "package": "com.fitflow.app",
+      "versionCode": 20,
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
+        "backgroundColor": "#14213D",
         "foregroundImage": "./assets/android-icon-foreground.png",
         "backgroundImage": "./assets/android-icon-background.png",
         "monochromeImage": "./assets/android-icon-monochrome.png"
       },
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "permissions": [
+        "CAMERA"
+      ]
     },
     "web": {
-      "favicon": "./assets/favicon.png"
-    }
+      "bundler": "metro",
+      "output": "single",
+      "favicon": "./assets/favicon.png",
+      "name": "FitFlow",
+      "shortName": "FitFlow",
+      "themeColor": "#C2410C"
+    },
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "cameraPermission": "FitFlow uses the camera so you can snap a photo of your meal for instant food recognition.",
+          "photosPermission": "FitFlow reads a photo you choose so it can recognise the food in it.",
+          "microphonePermission": false
+        }
+      ]
+    ]
   }
 }

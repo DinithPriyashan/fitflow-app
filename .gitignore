@@ -36,6 +36,15 @@ yarn-error.*
 # typescript
 *.tsbuildinfo
 
-# generated native folders
+# iOS project is generated on a Mac with: npx expo prebuild --platform ios
 /ios
-/android
+
+# Android signing secrets (never commit)
+*.keystore
+!android/app/debug.keystore
+keystore.properties
+android/local.properties
+android/.gradle/
+android/build/
+android/app/build/
+
